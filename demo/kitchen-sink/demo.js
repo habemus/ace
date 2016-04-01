@@ -352,6 +352,8 @@ function updateUIEditorOptions() {
     var editor = env.editor;
     var session = editor.session;
 
+    session.setTabSize(2);
+
     session.setFoldStyle(foldingEl.value);
 
     saveOption(docEl, session.name);
@@ -575,8 +577,8 @@ env.editSnippets = function() {
 require("ace/ext/language_tools");
 env.editor.setOptions({
     enableBasicAutocompletion: true,
-    enableLiveAutocompletion: false,
-    enableSnippets: true
+    enableLiveAutocompletion: true,
+    enableSnippets: false
 });
 
 var beautify = require("ace/ext/beautify");
