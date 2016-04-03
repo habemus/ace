@@ -581,6 +581,18 @@ env.editor.setOptions({
     enableSnippets: false
 });
 
+env.editor.on('autocomplete-hover', function (item) {
+    console.log('hover ', item.name);
+});
+
+env.editor.on('autocomplete-select', function (item) {
+    console.log('selected ', item.name);
+});
+
+env.editor.on('autocomplete-detach', function () {
+    console.log('autocomplete-detach');
+});
+
 var beautify = require("ace/ext/beautify");
 env.editor.commands.addCommands(beautify.commands);
 
