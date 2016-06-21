@@ -578,7 +578,9 @@ require("ace/ext/language_tools");
 env.editor.setOptions({
     enableBasicAutocompletion: true,
     enableLiveAutocompletion: true,
-    enableSnippets: false
+    enableSnippets: false,
+
+    scrollSpeed: 1,
 });
 
 env.editor.on('autocomplete-hover', function (item) {
